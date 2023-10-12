@@ -1,0 +1,14 @@
+{
+  "name": "viralvortex",
+  "version": "1.0.0",
+  "description": "first_theme",
+  "main": "index.js",
+  "scripts": {
+    "complie:sass": "node-sass sass/main.scss styles/style.css"
+  },
+  "author": "Flore Denis Gratian",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

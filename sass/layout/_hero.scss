@@ -1,0 +1,61 @@
+.hero{
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-bottom: 12rem;
+
+    &__text{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-size: 7rem;
+    font-family: $font-family-secondary;
+    font-weight: 800;
+    width: 50%;
+    transform: translateY(-5rem);
+    h1:nth-child(2){
+     transform: translateX(8rem);
+    }
+    }
+
+   &__img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    &__avatar{
+     width:80rem;
+     height: 70rem;
+    }
+
+    }
+  
+
+    &__motto{
+        display: flex;
+        flex-direction: row;
+        color: white;
+        position: absolute;
+        left: 20rem;
+        bottom: 3rem;
+        transform: rotate(-3.5deg);
+    }
+
+    &__motto p{
+        
+        font-weight: 800;
+        margin-left: 2rem;
+        font-family: $font-family-secondary;
+        font-size: 4rem;
+    }
+
+}

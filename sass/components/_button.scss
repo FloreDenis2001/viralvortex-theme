@@ -1,0 +1,38 @@
+button{
+    width: 15rem;
+    height: 5rem;
+    background-color: $color-white;
+    font-size: $default-font-size;
+    font-weight: 700;
+    color: $color-secondary;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px  rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+border: none;
+border-radius: 5px;
+    &:active{
+        transform: scale(0.96);
+      }
+
+    
+}
+
+.btn{
+   &__oferta{
+    width: 20rem;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    background-color: $color-secondary;
+    color: white;
+   }
+
+   &__despre{
+    width: 20rem;
+
+    margin-top: 3rem;
+    margin-left: 5rem;
+    color: white;
+    background-color: $color-primary;
+
+   }
+}

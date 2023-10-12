@@ -18,4 +18,8 @@ window.addEventListener("scroll", () => {
     }
 });
 
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+  });
+
 });

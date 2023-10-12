@@ -20,9 +20,16 @@
     font-weight: 800;
     width: 50%;
     transform: translateY(-5rem);
-    h1:nth-child(2){
-     transform: translateX(8rem);
+    
     }
+
+    &__text p{
+        font-size: 7rem;
+        font-family: $font-family-secondary;
+        font-weight: 800;
+        &:nth-child(2){
+           transform: translateX(8rem);
+        }
     }
 
    &__img{

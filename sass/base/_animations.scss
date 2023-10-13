@@ -1,0 +1,22 @@
+@keyframes waviy {
+    0%,100% {
+      transform: translateY(0)
+    }
+   
+    40% {
+      transform: translateY(-20px)
+    }
+
+ 
+}
+
+
+@keyframes animeText{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+ 
+}

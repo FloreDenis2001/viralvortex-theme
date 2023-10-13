@@ -1,0 +1,100 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // background-color: $color-black;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    min-height: 30rem;
+    width: 100%;
+    padding-bottom: 10rem;
+    &__logo{
+     margin: 3rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    &__logo img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    &__nav{
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 80%;
+
+    }
+
+    &__list{
+        border-top: 1px solid #ffffff;
+        padding-top: 2rem;
+        padding-inline: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__item{
+      
+        list-style: none;
+        margin-left: 2rem;
+        padding: 2rem;
+        padding-top: 1rem;
+
+
+    }
+
+    &__item a{
+        font-size: 2rem;
+        font-weight: 400;
+        color:$color-white;
+        text-decoration: none;
+        text-transform:initial;
+        letter-spacing: 2px;
+        color: rgb(232, 216, 252);
+        font-family: $font-family-secondary;
+}
+
+&__copyright{
+    text-align: center;
+    list-style: none;
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color:$color-white;
+    text-transform:initial;
+    letter-spacing: 2px;
+    color: rgb(232, 216, 252);
+    font-family: $font-family-secondary;
+    border-top: 1px solid #ffffff;
+    padding-top: 2rem;
+    padding-block: 2rem;
+
+}
+
+&__link{
+
+    &:link,&:visited{
+    font-size: 2rem;
+    font-weight: 400;
+    color:$color-white;
+    text-decoration: none;
+    text-transform:initial;
+    display: inline-block;
+    letter-spacing: 2px;
+    color: rgb(232, 216, 252);
+    font-family: $font-family-secondary;
+    transition: all 0.2s;}
+
+    &:hover,&:active{
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-secondary, .9);
+        transform: rotate(5deg) scale(1.3);
+    }
+}
+}

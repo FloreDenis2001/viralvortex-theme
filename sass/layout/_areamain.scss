@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     padding-block: 5rem;
+   
 
 &__title{
     font-size: 5rem;
@@ -27,6 +28,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    border-radius: 1rem;
 
     &__subtitle{
         font-family: $font-family-secondary;
@@ -46,7 +48,11 @@
         line-height: 1.6;
         font-weight: 400;
     }
+
+  
 }
+
+
 
 }
 
@@ -61,6 +67,11 @@
     justify-content: center;
     text-align: center;
     border-radius:66% 34% 70% 30% / 30% 56% 44% 70% ;
+    transition: transform 0.2s;
+
+    &:hover{
+        transform: skewX(-10deg) rotate(360deg);
+    }
 }
 
 .icon-box i{
@@ -87,6 +98,11 @@
             width: 70%;
             font-size: 1.5rem;
         }
+        
+        &:hover{
+            background-color:rgba(2, 2, 2, 0.178);
+            transform: scale(1.1);
+            }
     }
 
     &__item img{

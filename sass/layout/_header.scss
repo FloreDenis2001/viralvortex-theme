@@ -8,6 +8,11 @@
     width: 100%;
     background-color: transparent;
     padding: 1rem;
+    padding-top: 2rem;
+    
+   @include respond(phone){
+    justify-content: center;
+   }
 }
 
 .sticky{
@@ -16,10 +21,3 @@
 }
 
 
-.button__box{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center;
-}

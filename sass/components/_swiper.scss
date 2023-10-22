@@ -1,7 +1,7 @@
 .swiper {
     width: 50%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .swiper-slide {
@@ -10,8 +10,8 @@
     justify-content: center;
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 300px;
+    width: 30rem;
+    height: 30rem;
   }
 
   .swiper-slide img {
@@ -21,4 +21,13 @@
     &:hover{
       transform: scale(1.1);
     }
+
+    @include respond(phone) {
+      width: 14rem;
+      height: 10rem;
+      z-index: 100;
+  }
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $color-white;
   }

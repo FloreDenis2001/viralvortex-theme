@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1600] is where our normal styles apply
+1600px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,500;1,900&display=swap");
 @keyframes waviy {
@@ -22,7 +39,11 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; }
+
+.heading-primary {
+  font-size: 2rem; }
 
 button {
   width: 15rem;
@@ -36,20 +57,62 @@ button {
   transition: transform 0.2s ease;
   border: none;
   border-radius: 5px; }
+  @media only screen and (max-width: 75em) {
+    button {
+      width: 13rem;
+      font-size: 1.4rem;
+      height: 4; } }
 
 .btn__oferta {
-  width: 20rem;
+  width: 17rem;
   margin-top: 3rem;
   margin-left: 5rem;
   background-color: #764ba2;
   color: white; }
+  @media only screen and (min-width: 100em) {
+    .btn__oferta {
+      width: 20rem;
+      font-size: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn__oferta {
+      margin-top: 2rem;
+      margin-left: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn__oferta {
+      width: 13rem;
+      margin-top: 2rem;
+      padding-inline: 2rem;
+      margin-left: 0rem; } }
 
 .btn__despre {
-  width: 20rem;
+  width: 17rem;
   margin-top: 3rem;
   margin-left: 5rem;
   color: white;
   background-color: #667eea; }
+  @media only screen and (min-width: 100em) {
+    .btn__despre {
+      font-size: 2rem;
+      width: 20rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn__despre {
+      margin-top: 2rem;
+      margin-left: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn__despre {
+      width: 13rem;
+      margin-top: 2rem;
+      padding-inline: 2rem;
+      margin-left: 0rem; } }
+
+.button__box {
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .button__box {
+      margin-top: 2rem;
+      flex-direction: column;
+      justify-content: center; } }
 
 .logo {
   width: 10%;
@@ -60,6 +123,10 @@ button {
 .logo img {
   width: 10rem;
   height: 8rem; }
+  @media only screen and (max-width: 37.5em) {
+    .logo img {
+      width: 7rem;
+      height: 5rem; } }
 
 .navigation__container {
   display: flex;
@@ -82,14 +149,20 @@ button {
   color: rgba(255, 255, 255, 0.014); }
   .navigation__item a:hover {
     color: #e8d8fc; }
+  @media only screen and (max-width: 75em) {
+    .navigation__item a {
+      font-size: 1.4rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__item a {
+      display: none; } }
 
 .navigation .active {
   color: #e8d8fc; }
 
 .swiper {
   width: 50%;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
 
 .swiper-slide {
   display: flex;
@@ -97,14 +170,22 @@ button {
   justify-content: center;
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px; }
+  width: 30rem;
+  height: 30rem; }
 
 .swiper-slide img {
   display: block;
   width: 100%; }
   .swiper-slide img:hover {
     transform: scale(1.1); }
+  @media only screen and (max-width: 37.5em) {
+    .swiper-slide img {
+      width: 14rem;
+      height: 10rem;
+      z-index: 100; } }
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff; }
 
 .footer {
   display: flex;
@@ -121,15 +202,30 @@ button {
     justify-content: center;
     align-items: center; }
   .footer__logo img {
-    width: 20rem;
-    height: 20rem; }
+    width: 15rem;
+    height: 15rem; }
+    @media only screen and (min-width: 100em) {
+      .footer__logo img {
+        width: 20rem;
+        height: 20rem; } }
+    @media only screen and (max-width: 75em) {
+      .footer__logo img {
+        width: 13rem;
+        height: 13rem; } }
   .footer__nav {
     margin-top: 10rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-width: 80%; }
+    min-width: 90%; }
+    @media only screen and (min-width: 100em) {
+      .footer__nav {
+        min-width: 80%; } }
+    @media only screen and (max-width: 56.25em) {
+      .footer__nav {
+        margin-top: 5rem;
+        flex-direction: column; } }
   .footer__list {
     border-top: 1px solid #ffffff;
     padding-top: 2rem;
@@ -138,13 +234,26 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: space-around; }
+    @media only screen and (max-width: 75em) {
+      .footer__list {
+        padding-top: 1rem;
+        padding-inline: 1rem; } }
   .footer__item {
     list-style: none;
     margin-left: 2rem;
     padding: 2rem;
     padding-top: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .footer__item {
+        padding-top: 1rem;
+        padding-inline: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__item {
+        margin-left: 0rem;
+        padding: 0.5rem;
+        padding-top: 1rem; } }
   .footer__item a {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: #ffffff;
     text-decoration: none;
@@ -166,6 +275,16 @@ button {
     border-top: 1px solid #ffffff;
     padding-top: 2rem;
     padding-block: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copyright {
+        font-size: 1.5rem;
+        margin-top: 2rem; } }
+    @media only screen and (max-width: 75em) {
+      .footer__copyright {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__copyright {
+        font-size: 1rem; } }
   .footer__link:link, .footer__link:visited {
     font-size: 2rem;
     font-weight: 400;
@@ -177,6 +296,15 @@ button {
     color: #e8d8fc;
     font-family: "Red Hat Display", sans-serif;
     transition: all 0.2s; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__link:link, .footer__link:visited {
+        font-size: 1.4rem; } }
+    @media only screen and (max-width: 75em) {
+      .footer__link:link, .footer__link:visited {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__link:link, .footer__link:visited {
+        font-size: 1.2rem; } }
   .footer__link:hover, .footer__link:active {
     color: #ffffff;
     box-shadow: 0 1rem 2rem rgba(118, 75, 162, 0.9);
@@ -193,25 +321,56 @@ button {
   padding-bottom: 20rem; }
   .contact__head {
     font-family: "Red Hat Display", sans-serif;
-    font-size: 6rem;
+    font-size: 5rem;
     color: #181717;
     font-weight: 800; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__head {
+        font-size: 3.5rem; } }
   .contact__content {
     margin-top: 6rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80%; }
+    width: 90%; }
+    @media only screen and (min-width: 100em) {
+      .contact__content {
+        width: 80%; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__content {
+        flex-direction: column; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__content {
+        width: 100%; } }
   .contact__avatar {
     width: 50%; }
   .contact__avatar img {
-    width: 50rem; }
+    width: 40rem; }
+    @media only screen and (min-width: 100em) {
+      .contact__avatar img {
+        width: 50rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__avatar img {
+        width: 30rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__avatar img {
+        width: 20rem; } }
   .contact__form {
     width: 50%;
     display: flex;
     flex-direction: column;
     padding-left: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__form {
+        padding-top: 2rem;
+        align-items: center;
+        width: 80%; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__form {
+        padding-top: 2rem;
+        align-items: center;
+        width: 100%; } }
     .contact__form__input {
       margin-top: 1rem;
       width: 70%;
@@ -248,8 +407,7 @@ button {
       margin-top: 2rem;
       background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #ffffff;
-      border-radius: 23% 77% 49% 51% / 51% 59% 41% 49%;
-      height: 10rem; }
+      height: 5rem; }
 
 .colabs {
   background-image: linear-gradient(355deg, #667eea 0%, #764ba2 100%);
@@ -262,51 +420,70 @@ button {
   padding-top: 10rem;
   min-height: 90rem; }
   .colabs__title {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 800;
     font-family: "Red Hat Display", sans-serif;
     color: #ffffff; }
+    @media only screen and (max-width: 56.25em) {
+      .colabs__title {
+        font-size: 3.5rem; } }
   .colabs__describe {
     margin-top: 2rem;
     text-align: center;
     max-width: 60rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     font-family: "Red Hat Display", sans-serif;
     color: #ffffff;
     margin-bottom: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .colabs__describe {
+        max-width: 70%;
+        font-size: 1.4rem; } }
 
-.about, .services {
+.about,
+.services {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-block: 5rem; }
-  .about__title, .services__title {
+  .about__title,
+  .services__title {
     font-size: 5rem;
     font-family: "Red Hat Display", sans-serif;
     font-weight: 700;
     margin-left: 5rem; }
-  .about__all, .services__all {
+  .about__all,
+  .services__all {
     width: 90%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around; }
-  .about__item, .services__item {
-    max-width: 300px;
+  .about__item,
+  .services__item {
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
     border-radius: 1rem; }
-    .about__item__subtitle, .services__item__subtitle {
+    @media only screen and (max-width: 56.25em) {
+      .about__item,
+      .services__item {
+        min-width: 25rem;
+        margin: 1rem !important; } }
+    .about__item__subtitle,
+    .services__item__subtitle {
       font-family: "Red Hat Display", sans-serif;
       margin-top: 2rem;
       font-size: 2.2rem;
       font-weight: 800;
       text-align: center; }
-    .about__item__describe, .services__item__describe {
+    .about__item__describe,
+    .services__item__describe {
       font-family: "Red Hat Display", sans-serif;
       width: 20rem;
       margin-top: 1rem;
@@ -316,8 +493,8 @@ button {
       font-weight: 400; }
 
 .icon-box {
-  width: 20rem;
-  height: 20rem;
+  width: 17rem;
+  height: 17rem;
   background-image: linear-gradient(355deg, #667eea 0%, #764ba2 100%);
   color: white;
   display: grid;
@@ -328,9 +505,21 @@ button {
   transition: transform 0.2s; }
   .icon-box:hover {
     transform: skewX(-10deg) rotate(360deg); }
+  @media only screen and (min-width: 100em) {
+    .icon-box {
+      width: 20rem;
+      height: 20rem; } }
 
 .icon-box i {
   font-size: 10rem; }
+
+@media only screen and (max-width: 56.25em) {
+  .services__title {
+    font-size: 3.2rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .services__title {
+    text-align: center; } }
 
 .services__all {
   margin-top: 10rem;
@@ -348,10 +537,21 @@ button {
   .services__item:hover {
     background-color: rgba(2, 2, 2, 0.178);
     transform: scale(1.1); }
+  @media only screen and (max-width: 37.5em) {
+    .services__item {
+      margin-top: 2rem; } }
 
 .services__item img {
-  width: 35rem;
-  height: 30rem; }
+  width: 30rem;
+  height: 25rem; }
+  @media only screen and (min-width: 100em) {
+    .services__item img {
+      width: 35rem;
+      height: 30rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .services__item img {
+      width: 22rem;
+      height: 17rem; } }
 
 .hero {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -360,22 +560,38 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   position: relative;
-  padding-bottom: 12rem; }
+  padding-bottom: 17rem;
+  width: 100%; }
+  @media only screen and (max-width: 75em) {
+    .hero {
+      padding-top: 18rem;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 18rem; } }
+  @media only screen and (min-width: 100em) {
+    .hero {
+      justify-content: center; } }
   .hero__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    font-size: 7rem;
     font-family: "Red Hat Display", sans-serif;
     font-weight: 800;
-    width: 50%;
-    transform: translateY(-5rem); }
+    width: 50%; }
+    @media only screen and (max-width: 75em) {
+      .hero__text {
+        padding-top: 2rem;
+        padding-bottom: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .hero__text {
+        width: 100%; } }
   .hero__text p {
     position: relative;
-    font-size: 7rem;
+    font-size: 5.5rem;
     font-family: "Red Hat Display", sans-serif;
     font-weight: 800;
     color: #ffffff; }
@@ -383,6 +599,12 @@ button {
       transform: translateX(8rem);
       -webkit-text-stroke: 0.05vw #ffffff;
       color: rgba(255, 255, 255, 0.014); }
+      @media only screen and (max-width: 75em) {
+        .hero__text p:nth-child(2) {
+          transform: translateX(5rem); } }
+      @media only screen and (max-width: 37.5em) {
+        .hero__text p:nth-child(2) {
+          transform: translateX(2rem); } }
       .hero__text p:nth-child(2)::before {
         content: attr(data-text);
         position: absolute;
@@ -395,30 +617,67 @@ button {
         border-right: 3px solid #764ba2;
         overflow: hidden;
         animation: animeText 6s linear infinite; }
+    @media only screen and (min-width: 100em) {
+      .hero__text p {
+        font-size: 7rem; } }
+    @media only screen and (max-width: 75em) {
+      .hero__text p {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .hero__text p {
+        font-size: 4.6rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .hero__text p {
+        font-size: 3.5rem; } }
   .hero__img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 50%; }
     .hero__img__avatar {
-      width: 80rem;
-      height: 70rem; }
+      width: 60rem;
+      height: 45rem; }
+      @media only screen and (min-width: 100em) {
+        .hero__img__avatar {
+          width: 70rem;
+          height: 50rem; } }
+      @media only screen and (max-width: 75em) {
+        .hero__img__avatar {
+          display: none; } }
   .hero__motto {
     display: flex;
     flex-direction: row;
     color: white;
     position: absolute;
-    left: 20rem;
+    left: 13rem;
     bottom: 3rem;
     transform: rotate(-3.5deg); }
+    @media only screen and (max-width: 56.25em) {
+      .hero__motto {
+        display: none; } }
+    @media only screen and (max-width: 75em) {
+      .hero__motto {
+        left: 22%; } }
+    @media only screen and (min-width: 100em) {
+      .hero__motto {
+        left: 20rem; } }
 
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  font-size: 4rem;
-  margin-left: 4rem;
-  transform: translateY(-50px); }
+  font-size: 3rem;
+  margin-left: 2rem;
+  transform: translateY(-3rem); }
+  @media only screen and (max-width: 56.25em) {
+    .waviy {
+      font-size: 1rem; } }
+  @media only screen and (max-width: 75em) {
+    .waviy {
+      font-size: 2.5rem; } }
+  @media only screen and (min-width: 100em) {
+    .waviy {
+      font-size: 3.5rem; } }
   .waviy span {
     font-family: "Red Hat Display", sans-serif;
     position: relative;
@@ -436,14 +695,11 @@ button {
   z-index: 10000;
   width: 100%;
   background-color: transparent;
-  padding: 1rem; }
+  padding: 1rem;
+  padding-top: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      justify-content: center; } }
 
 .sticky {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-
-.button__box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; }

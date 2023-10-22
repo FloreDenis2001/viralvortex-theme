@@ -8,4 +8,8 @@
 .logo img{
     width: 10rem;
     height: 8rem;
+    @include respond(phone) {
+        width: 7rem;
+    height: 5rem;
+    }
 }

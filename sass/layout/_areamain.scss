@@ -1,115 +1,156 @@
-.about , .services{
+.about,
+.services {
 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-block: 5rem;
-   
 
-&__title{
-    font-size: 5rem;
-    font-family: $font-family-secondary;
-    font-weight: 700;
-    margin-left: 5rem;
-}
 
-&__all{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-&__item{
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    border-radius: 1rem;
-
-    &__subtitle{
+    &__title {
+        font-size: 5rem;
         font-family: $font-family-secondary;
-        margin-top: 2rem;
-        font-size: 2.2rem;
-        font-weight: 800;
-        text-align: center;
+        font-weight: 700;
+        margin-left: 5rem;
+    }
+
+    &__all {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__item {
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        @include respond(tab-port) {
+            min-width: 25rem;
+            margin: 1rem !important;
+        }
+
+
+        &__subtitle {
+            font-family: $font-family-secondary;
+            margin-top: 2rem;
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+
+
+
+        }
+
+        &__describe {
+            font-family: $font-family-secondary;
+            width: 20rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-weight: 400;
+
+
+
+        }
+
 
     }
 
-    &__describe{
-        font-family: $font-family-secondary;
-        width: 20rem;
-        margin-top: 1rem;
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: 1.6;
-        font-weight: 400;
-    }
-
-  
-}
-
 
 
 }
 
 
-.icon-box{
-    width: 20rem;
-    height: 20rem;
+.icon-box {
+    width: 17rem;
+    height: 17rem;
     background-image: linear-gradient(355deg, #667eea 0%, #764ba2 100%);
     color: white;
     display: grid;
     align-content: center;
     justify-content: center;
     text-align: center;
-    border-radius:66% 34% 70% 30% / 30% 56% 44% 70% ;
+    border-radius: 66% 34% 70% 30% / 30% 56% 44% 70%;
     transition: transform 0.2s;
 
-    &:hover{
+    &:hover {
         transform: skewX(-10deg) rotate(360deg);
+    }
+
+    @include respond(big-desktop) {
+        width: 20rem;
+        height: 20rem;
     }
 }
 
-.icon-box i{
+.icon-box i {
     font-size: 10rem;
 }
 
 
-.services{
-    &__all{
-        margin-top: 10rem;
-        display:flex;
-        flex-wrap: wrap;
-        // gap: 5px;
+.services {
+    &__title {
+        @include respond(tab-port) {
+
+            font-size: 3.2rem;
+        }
+        @include respond(phone) {
+
+           text-align: center;
+        }
     }
-    &__item{
+
+    &__all {
+        margin-top: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
         min-width: 30%;
         margin-top: 5rem;
 
-        &__subtitle{
+
+
+        &__subtitle {
             font-size: 3rem;
         }
 
-        &__describe{
+        &__describe {
             width: 70%;
             font-size: 1.5rem;
         }
-        
-        &:hover{
-            background-color:rgba(2, 2, 2, 0.178);
+
+        &:hover {
+            background-color: rgba(2, 2, 2, 0.178);
             transform: scale(1.1);
-            }
+        }
+
+        @include respond(phone) {
+          margin-top: 2rem;
+        }
     }
 
-    &__item img{
-        width:35rem;
-        height: 30rem;
+    &__item img {
+        width: 30rem;
+        height: 25rem;
+
+        @include respond(big-desktop) {
+            width: 35rem;
+            height: 30rem;
+        }
+        @include respond(phone) {
+            width: 22rem;
+            height: 17rem;
+        }
     }
 }
-
-
-

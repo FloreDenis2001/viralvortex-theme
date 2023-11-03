@@ -1,14 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,500;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 // COLORS 
-$color-white:#ffffff;
-$color-black:#181717;
-$color-primary:#667eea;
-$color-secondary:#764ba2;
+$color-bg:#222831;
+$color-white:#eeeeee;
+$color-primary:#FFD369;
+$color-secondary:#393E46;
 
+
+$linear-gradient-primary :linear-gradient(135deg,$color-primary 0%, $color-secondary 100%); 
 // FONTS 
 
 $font-family-primary:"Roboto",sans-serif;
-$font-family-secondary:"Red Hat Display",sans-serif;
+$font-family-secondary:'Paytone One', sans-serif;
 $default-font-size: 1.6rem;

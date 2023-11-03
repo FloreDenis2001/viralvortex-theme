@@ -17,6 +17,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,500;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @keyframes waviy {
   0%, 100% {
     transform: translateY(0); }
@@ -38,24 +39,39 @@ html {
   font-size: 62.5%; }
 
 body {
+  background-color: #222831;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden; }
 
+h1, h2, h3, h4, h5 {
+  font-family: "Paytone One", sans-serif; }
+
+h4 {
+  font-size: 2rem;
+  color: #eeeeee;
+  letter-spacing: 0.4rem; }
+
+.img-avatar {
+  width: 30rem;
+  height: 30rem;
+  margin-left: 50%; }
+
 .heading-primary {
+  text-align: center;
   font-size: 2rem; }
 
 button {
   width: 15rem;
   height: 5rem;
-  background-color: #ffffff;
+  background-color: #222831;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #764ba2;
+  color: #FFD369;
   cursor: pointer;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-  border: none;
+  border: 2px solid #FFD369;
   border-radius: 5px; }
   @media only screen and (max-width: 75em) {
     button {
@@ -66,9 +82,9 @@ button {
 .btn__oferta {
   width: 17rem;
   margin-top: 3rem;
-  margin-left: 5rem;
-  background-color: #764ba2;
-  color: white; }
+  text-transform: uppercase;
+  background-color: #FFD369;
+  color: #393E46; }
   @media only screen and (min-width: 100em) {
     .btn__oferta {
       width: 20rem;
@@ -87,9 +103,10 @@ button {
 .btn__despre {
   width: 17rem;
   margin-top: 3rem;
-  margin-left: 5rem;
-  color: white;
-  background-color: #667eea; }
+  margin-left: 2rem;
+  text-transform: uppercase;
+  color: #FFD369;
+  background-color: #222831; }
   @media only screen and (min-width: 100em) {
     .btn__despre {
       font-size: 2rem;
@@ -107,7 +124,8 @@ button {
 
 .button__box {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-top: 5rem; }
   @media only screen and (max-width: 37.5em) {
     .button__box {
       margin-top: 2rem;
@@ -141,14 +159,13 @@ button {
 .navigation__item a {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #eeeeee;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  -webkit-text-stroke: 0.001vw #ffffff;
-  color: rgba(255, 255, 255, 0.014); }
+  color: #eeeeee; }
   .navigation__item a:hover {
-    color: #e8d8fc; }
+    color: #FFD369; }
   @media only screen and (max-width: 75em) {
     .navigation__item a {
       font-size: 1.4rem; } }
@@ -157,12 +174,13 @@ button {
       display: none; } }
 
 .navigation .active {
-  color: #e8d8fc; }
+  color: #FFD369; }
 
 .swiper {
-  width: 50%;
+  width: 100%;
   padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  background-color: #222831; }
 
 .swiper-slide {
   display: flex;
@@ -185,14 +203,13 @@ button {
       z-index: 100; } }
 
 .swiper-pagination-bullet-active {
-  background-color: #ffffff; }
+  background-color: #eeeeee; }
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 30rem;
   width: 100%;
   padding-bottom: 10rem; }
@@ -255,23 +272,23 @@ button {
   .footer__item a {
     font-size: 1.6rem;
     font-weight: 400;
-    color: #ffffff;
+    color: #eeeeee;
     text-decoration: none;
     text-transform: initial;
     letter-spacing: 2px;
     color: #e8d8fc;
-    font-family: "Red Hat Display", sans-serif; }
+    font-family: "Paytone One", sans-serif; }
   .footer__copyright {
     text-align: center;
     list-style: none;
     margin-left: 2rem;
     font-size: 2rem;
     font-weight: 400;
-    color: #ffffff;
+    color: #eeeeee;
     text-transform: initial;
     letter-spacing: 2px;
     color: #e8d8fc;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Paytone One", sans-serif;
     border-top: 1px solid #ffffff;
     padding-top: 2rem;
     padding-block: 2rem; }
@@ -288,13 +305,13 @@ button {
   .footer__link:link, .footer__link:visited {
     font-size: 2rem;
     font-weight: 400;
-    color: #ffffff;
+    color: #eeeeee;
     text-decoration: none;
     text-transform: initial;
     display: inline-block;
     letter-spacing: 2px;
     color: #e8d8fc;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Paytone One", sans-serif;
     transition: all 0.2s; }
     @media only screen and (max-width: 56.25em) {
       .footer__link:link, .footer__link:visited {
@@ -306,8 +323,8 @@ button {
       .footer__link:link, .footer__link:visited {
         font-size: 1.2rem; } }
   .footer__link:hover, .footer__link:active {
-    color: #ffffff;
-    box-shadow: 0 1rem 2rem rgba(118, 75, 162, 0.9);
+    color: #eeeeee;
+    box-shadow: 0 1rem 2rem rgba(57, 62, 70, 0.9);
     transform: rotate(5deg) scale(1.3); }
 
 .contact {
@@ -320,9 +337,9 @@ button {
   min-height: 70rem;
   padding-bottom: 20rem; }
   .contact__head {
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Paytone One", sans-serif;
     font-size: 5rem;
-    color: #181717;
+    color: #eeeeee;
     font-weight: 800; }
     @media only screen and (max-width: 56.25em) {
       .contact__head {
@@ -378,52 +395,53 @@ button {
       border-radius: 0.5rem;
       padding-left: 2rem;
       font-weight: 600;
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Paytone One", sans-serif;
       border: 2px solid #666; }
       .contact__form__input:focus {
         padding-left: 2rem;
         background-color: transparent;
         border: none;
-        outline: 2px solid #764ba2; }
+        outline: 2px solid #393E46; }
     .contact__form__textarea {
       width: 70%;
       margin-top: 2rem;
       max-height: 30rem;
       border-radius: 0.5rem;
-      border: 2px solid #667eea;
+      border: 2px solid #FFD369;
       padding-top: 2rem;
       font-weight: 600;
       padding-left: 2rem;
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Paytone One", sans-serif;
       border: 2px solid #666; }
       .contact__form__textarea:focus {
         padding-top: 2rem;
         padding-left: 2rem;
         background-color: transparent;
         border: none;
-        outline: 2px solid #764ba2; }
+        outline: 2px solid #393E46; }
     .contact__form__send {
       font-size: 2rem;
       margin-top: 2rem;
       background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #ffffff;
+      color: #eeeeee;
       height: 5rem; }
 
 .colabs {
-  background-image: linear-gradient(355deg, #667eea 0%, #764ba2 100%);
+  background-color: #FFD369;
   display: flex;
   flex-direction: column;
   padding-bottom: 5rem;
-  clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%);
   align-items: center;
   justify-content: center;
   padding-top: 10rem;
-  min-height: 90rem; }
+  min-height: 80rem;
+  position: relative; }
   .colabs__title {
     font-size: 5rem;
     font-weight: 800;
-    font-family: "Red Hat Display", sans-serif;
-    color: #ffffff; }
+    font-family: "Paytone One", sans-serif;
+    color: #393E46;
+    text-transform: uppercase; }
     @media only screen and (max-width: 56.25em) {
       .colabs__title {
         font-size: 3.5rem; } }
@@ -433,137 +451,142 @@ button {
     max-width: 60rem;
     font-size: 1.6rem;
     font-weight: 400;
-    font-family: "Red Hat Display", sans-serif;
-    color: #ffffff;
+    font-family: "Paytone One", sans-serif;
+    color: #393E46;
     margin-bottom: 5rem; }
     @media only screen and (max-width: 56.25em) {
       .colabs__describe {
         max-width: 70%;
         font-size: 1.4rem; } }
 
-.about,
+.details {
+  background-color: #FFD369;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  clip-path: polygon(0 13%, 100% 0, 100% 87%, 0 100%); }
+  .details__item {
+    color: #393E46;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 25rem;
+    text-align: center; }
+  .details__title {
+    font-size: 3rem; }
+  .details__describe {
+    margin-top: 1rem;
+    font-size: 1.6rem; }
+  .details__item img {
+    width: 15rem;
+    height: 15rem; }
+
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 5rem; }
-  .about__title,
+  padding-block: 3rem; }
   .services__title {
     font-size: 5rem;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Paytone One", sans-serif;
     font-weight: 700;
-    margin-left: 5rem; }
-  .about__all,
+    text-transform: uppercase;
+    color: #FFD369; }
+    @media only screen and (max-width: 56.25em) {
+      .services__title {
+        font-size: 3.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .services__title {
+        text-align: center; } }
   .services__all {
+    margin-top: 6rem;
     width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around; }
-  .about__item,
+    justify-content: space-around;
+    gap: 5rem;
+    padding-bottom: 5rem; }
   .services__item {
-    max-width: 30rem;
+    max-width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    padding: 4rem;
+    width: 100%;
+    transform: all 0.5s; }
     @media only screen and (max-width: 56.25em) {
-      .about__item,
       .services__item {
         min-width: 25rem;
         margin: 1rem !important; } }
-    .about__item__subtitle,
+    .services__item:hover {
+      background-color: rgba(2, 2, 2, 0.178);
+      transform: translateY(-2rem) scale(1.1); }
     .services__item__subtitle {
-      font-family: "Red Hat Display", sans-serif;
-      margin-top: 2rem;
-      font-size: 2.2rem;
+      font-family: "Paytone One", sans-serif;
+      font-size: 3rem;
       font-weight: 800;
-      text-align: center; }
-    .about__item__describe,
+      text-align: center;
+      color: #FFD369;
+      text-align: center;
+      display: flex;
+      align-items: center; }
     .services__item__describe {
-      font-family: "Red Hat Display", sans-serif;
+      display: flex;
+      align-items: center;
       width: 20rem;
+      font-weight: 600;
       margin-top: 1rem;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       line-height: 1.6;
-      font-weight: 400; }
-
-.icon-box {
-  width: 17rem;
-  height: 17rem;
-  background-image: linear-gradient(355deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 66% 34% 70% 30% / 30% 56% 44% 70%;
-  transition: transform 0.2s; }
-  .icon-box:hover {
-    transform: skewX(-10deg) rotate(360deg); }
-  @media only screen and (min-width: 100em) {
-    .icon-box {
-      width: 20rem;
-      height: 20rem; } }
-
-.icon-box i {
-  font-size: 10rem; }
-
-@media only screen and (max-width: 56.25em) {
-  .services__title {
-    font-size: 3.2rem; } }
-
-@media only screen and (max-width: 37.5em) {
-  .services__title {
-    text-align: center; } }
-
-.services__all {
-  margin-top: 10rem;
-  display: flex;
-  flex-wrap: wrap; }
-
-.services__item {
-  min-width: 30%;
-  margin-top: 5rem; }
-  .services__item__subtitle {
-    font-size: 3rem; }
-  .services__item__describe {
-    width: 70%;
-    font-size: 1.5rem; }
-  .services__item:hover {
-    background-color: rgba(2, 2, 2, 0.178);
-    transform: scale(1.1); }
-  @media only screen and (max-width: 37.5em) {
-    .services__item {
-      margin-top: 2rem; } }
-
-.services__item img {
-  width: 30rem;
-  height: 25rem; }
-  @media only screen and (min-width: 100em) {
-    .services__item img {
-      width: 35rem;
-      height: 30rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .services__item img {
-      width: 22rem;
-      height: 17rem; } }
+      font-weight: 400;
+      color: #eeeeee;
+      object-fit: cover; }
+    .services__item__link {
+      margin-top: 2rem;
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: #FFD369;
+      border-bottom: 1px solid #FFD369;
+      padding: 0.5rem;
+      transition: all .2s; }
+      .services__item__link:hover {
+        background-color: #FFD369;
+        color: #393E46;
+        transform: translateY(0%);
+        border-radius: 0.5rem; }
+  .services__item img {
+    width: 18rem;
+    height: 18rem;
+    margin-bottom: 2rem; }
+    @media only screen and (min-width: 100em) {
+      .services__item img {
+        width: 35rem;
+        height: 30rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .services__item img {
+        width: 22rem;
+        height: 17rem; } }
 
 .hero {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #222831;
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
   padding-top: 12rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   position: relative;
-  padding-bottom: 17rem;
-  width: 100%; }
+  padding-bottom: 3rem;
+  width: 100%;
+  height: 100vh; }
   @media only screen and (max-width: 75em) {
     .hero {
       padding-top: 18rem;
@@ -574,14 +597,15 @@ button {
     .hero {
       justify-content: center; } }
   .hero__text {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    font-family: "Red Hat Display", sans-serif;
+    color: #eeeeee;
+    font-family: "Paytone One", sans-serif;
     font-weight: 800;
-    width: 50%; }
+    width: 70%; }
     @media only screen and (max-width: 75em) {
       .hero__text {
         padding-top: 2rem;
@@ -591,13 +615,15 @@ button {
         width: 100%; } }
   .hero__text p {
     position: relative;
-    font-size: 5.5rem;
-    font-family: "Red Hat Display", sans-serif;
+    font-size: 5rem;
+    font-family: "Paytone One", sans-serif;
     font-weight: 800;
-    color: #ffffff; }
+    color: #eeeeee;
+    transform: scale(1, 2);
+    text-transform: uppercase; }
     .hero__text p:nth-child(2) {
-      transform: translateX(8rem);
-      -webkit-text-stroke: 0.05vw #ffffff;
+      margin-top: 5rem;
+      -webkit-text-stroke: 0.05vw #FFD369;
       color: rgba(255, 255, 255, 0.014); }
       @media only screen and (max-width: 75em) {
         .hero__text p:nth-child(2) {
@@ -605,18 +631,6 @@ button {
       @media only screen and (max-width: 37.5em) {
         .hero__text p:nth-child(2) {
           transform: translateX(2rem); } }
-      .hero__text p:nth-child(2)::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        color: #ffffff;
-        -webkit-text-stroke: 0vw #ffffff;
-        border-right: 3px solid #764ba2;
-        overflow: hidden;
-        animation: animeText 6s linear infinite; }
     @media only screen and (min-width: 100em) {
       .hero__text p {
         font-size: 7rem; } }
@@ -629,29 +643,11 @@ button {
     @media only screen and (max-width: 37.5em) {
       .hero__text p {
         font-size: 3.5rem; } }
-  .hero__img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 50%; }
-    .hero__img__avatar {
-      width: 60rem;
-      height: 45rem; }
-      @media only screen and (min-width: 100em) {
-        .hero__img__avatar {
-          width: 70rem;
-          height: 50rem; } }
-      @media only screen and (max-width: 75em) {
-        .hero__img__avatar {
-          display: none; } }
   .hero__motto {
+    margin-top: 15rem;
     display: flex;
     flex-direction: row;
     color: white;
-    position: absolute;
-    left: 13rem;
-    bottom: 3rem;
     transform: rotate(-3.5deg); }
     @media only screen and (max-width: 56.25em) {
       .hero__motto {
@@ -666,8 +662,8 @@ button {
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  font-size: 3rem;
-  margin-left: 2rem;
+  font-size: 2.5rem;
+  margin-left: 5rem;
   transform: translateY(-3rem); }
   @media only screen and (max-width: 56.25em) {
     .waviy {
@@ -679,10 +675,10 @@ button {
     .waviy {
       font-size: 3.5rem; } }
   .waviy span {
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Paytone One", sans-serif;
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: #FFD369;
     animation: waviy 2s infinite;
     animation-delay: calc(0.1s * var(--i)); }
 
@@ -702,4 +698,33 @@ button {
       justify-content: center; } }
 
 .sticky {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  background: #222831; }
+
+.team {
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .team__container {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%; }
+  .team__member img {
+    width: 40rem;
+    height: 40rem; }
+  .team__title {
+    font-size: 5rem;
+    font-family: "Paytone One", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFD369; }
+    @media only screen and (max-width: 56.25em) {
+      .team__title {
+        font-size: 3.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__title {
+        text-align: center; } }

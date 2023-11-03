@@ -24,11 +24,10 @@
         text-transform:uppercase;
         letter-spacing: 2px;
 
-        -webkit-text-stroke: 0.001vw $color-white;
-        color: rgba(255, 255, 255, 0.014);
+        color:$color-white;
 
         &:hover{
-            color: rgb(232, 216, 252);
+            color:$color-primary;
         }
 
        @include respond(tab-land){
@@ -40,7 +39,7 @@
     }
 
     .active  {
-        color: rgb(232, 216, 252);
+        color: $color-primary
     }
 
 }

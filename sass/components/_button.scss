@@ -1,14 +1,14 @@
 button {
     width: 15rem;
     height: 5rem;
-    background-color: $color-white;
+    background-color: $color-bg;
     font-size: $default-font-size;
     font-weight: 700;
-    color: $color-secondary;
+    color: $color-primary;
     cursor: pointer;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
-    border: none;
+    border:2px solid $color-primary;
     border-radius: 5px;
 
 
@@ -25,9 +25,10 @@ button {
     &__oferta {
         width: 17rem;
         margin-top: 3rem;
-        margin-left: 5rem;
-        background-color: $color-secondary;
-        color: white;
+        text-transform: uppercase;
+
+        background-color: $color-primary;
+        color: $color-secondary;
 
         @include respond(big-desktop) {
             width: 20rem;
@@ -52,10 +53,11 @@ button {
     &__despre {
         width: 17rem;
         margin-top: 3rem;
-        margin-left: 5rem;
-        color: white;
-        background-color: $color-primary;
-
+        margin-left: 2rem;
+        text-transform: uppercase;
+        color: $color-primary;
+        background-color: $color-bg;
+        
         @include respond(big-desktop) {
             font-size: 2rem;
             width: 20rem;
@@ -79,6 +81,7 @@ button {
 .button__box {
     display: flex;
     align-items: center;
+    margin-top: 5rem;
 
     @include respond(phone) {
         margin-top: 2rem;

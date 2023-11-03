@@ -1,0 +1,39 @@
+.team {
+    padding-block: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__container {
+        margin-top: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        flex-direction: row;
+        width: 90%;
+
+    }
+
+
+    &__member img {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    &__title{
+        font-size: 5rem;
+        font-family: $font-family-secondary;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-primary;
+
+        @include respond(tab-port) {
+
+            font-size: 3.2rem;
+        }
+        @include respond(phone) {
+
+           text-align: center;
+        }
+    }
+}
